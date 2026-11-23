@@ -1,0 +1,22 @@
+{
+  "name": "gitlab-mcp",
+  "version": "1.0.0",
+  "description": "MCP server local, chỉ đọc, để Claude đọc merge request, bình luận review, lịch sử nhánh, file và diff trên GitLab",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "gitlab-mcp": "src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "start:http": "node src/index.js --http",
+    "inspect": "npx @modelcontextprotocol/inspector node src/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  }
+}
